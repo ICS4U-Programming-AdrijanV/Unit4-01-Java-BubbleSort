@@ -6,7 +6,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+* The program uses bubble sort.
+*
+* @author  Adrijan Vranjkovic
+* @version 1.0
+* @since   2023-05-15
+*/
+
 public final class BubbleSort {
+    /**
+    * For style checker.
+    *
+    * @exception IllegalStateException Utility class.
+    * @see IllegalStateException
+    */
     private BubbleSort() {
         throw new IllegalStateException("Utility class");
     }
@@ -28,13 +42,14 @@ public final class BubbleSort {
             final FileWriter output = new FileWriter("output.txt");
 
             while (scanInput.hasNextLine()) {
-                // cut off any trailing whitespaces
-                String line = scanInput.nextLine().trim();
+                // cut off any trailing white spaces
+                final String line = scanInput.nextLine().trim();
 
                 // Skip any blank lines/
                 if (!line.isEmpty()) {
                     // Parse the input line and store the resulting array
-                    int[] arrOfInt = parseInputLine(line);
+                    final int[] arrOfInt = parseInputLine(line);
+
                     if (arrOfInt != null) {
                         inputList.add(arrOfInt);
                     } else {
